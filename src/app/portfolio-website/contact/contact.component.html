@@ -1,0 +1,41 @@
+<section id="banner">
+  <div class="banner">
+    <div class="banner-content">
+      <div class="image-container">
+        <img src="assets/desk.gif" alt="Animated Image" class="left-image" />
+      </div>
+      <h1>
+        Bridging Systems and Design — A UI Developer and System Engineer at
+        Heart.
+      </h1>
+      <p>
+        Hi, I'm Shilpi Saha, a passionate Frontend Developer specializing in
+        Angular, SEO, and crafting fast, user-friendly websites.
+      </p>
+      <div class="banner-buttons">
+        <button (click)="scrollToAbout()" class="btn-primary">
+          View My Work
+        </button>
+        <a href="assets/resume.pdf" class="btn-download">Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section #aboutSection *ngIf="showAboutSection" id="about">
+    <div class="banner">
+      <div class="card" [@cardAnimation]>
+        <div class="card-content">
+          <p>
+            As a System Engineer with over 2.5 years of hands-on experience, I
+            specialize in building robust, scalable web applications using Angular.
+            I am passionate about developing innovative solutions that enhance user experience and drive performance.
+            My expertise extends to crafting dynamic, responsive front-end interfaces and applying technical SEO strategies to improve website visibility and traffic.
+            I am a collaborative team player who thrives in fast-paced environments, continuously seeking opportunities to expand my technical knowledge.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 

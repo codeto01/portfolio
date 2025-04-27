@@ -1,0 +1,27 @@
+<section id="navbar">
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links">
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a (click)="scrollToExp()" routerLinkActive="active">About</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+  </nav>
+</section>
+<section #wrkexp *ngIf="showExp" id="about">
+  <div class="banner">
+    <div class="card" [@cardAnimation]>
+      <div class="card-content">
+        <p>
+          As a System Engineer with over 2.5 years of hands-on experience, I
+          specialize in building robust, scalable web applications using Angular.
+          I am passionate about developing innovative solutions that enhance user experience and drive performance.
+          My expertise extends to crafting dynamic, responsive front-end interfaces and applying technical SEO strategies to improve website visibility and traffic.
+          I am a collaborative team player who thrives in fast-paced environments, continuously seeking opportunities to expand my technical knowledge.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
