@@ -1,0 +1,11 @@
+<div *ngIf="datas">
+    <h2>Details</h2>
+    <p><strong>Name:</strong> {{ datas[0]?.name }}</p>
+    <p><strong>Email:</strong> {{ datas[4].email }}</p>
+  </div>
+  
+  <!-- If no data is available, show a loading message or similar -->
+  <div *ngIf="!datas">
+    <p>Loading data...</p>
+  </div>
+  

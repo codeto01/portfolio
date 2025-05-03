@@ -5,7 +5,7 @@
       <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
       <li><a (click)="scrollToExp()" routerLinkActive="active">About</a></li>
       <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a [routerLink]="['/direction']">Contact</a></li>
     </ul>
   </nav>
 </section>

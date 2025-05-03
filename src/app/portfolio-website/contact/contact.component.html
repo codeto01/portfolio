@@ -151,9 +151,14 @@
 
 </div>
 <div class="contact-form">
-  <form class="form" id="frm">
+  <form class="minForm" [formGroup]="myorm">
+    <div>
     <h3 class="fnt">Send me Hi</h3>
     <label class="lbl">Name</label>
-    <input type="text" placeholder="Enter name">
+    <input type="text" placeholder="Enter name" formControlName="name">
+  </div>
+  <div>
+    <button class="btn" (click)="cntNavigate()">Submit</button>
+  </div>
   </form>
 </div>

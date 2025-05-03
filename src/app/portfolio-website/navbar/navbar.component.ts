@@ -3,10 +3,13 @@ import { Component, ElementRef, EventEmitter, Output } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewChild } from '@angular/core';
 import { animate, keyframes, style, transition, trigger } from '@angular/animations';
+import { Router, RouterModule } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
    animations: [
@@ -34,11 +37,28 @@ export class NavbarComponent {
   @ViewChild('wrkexp') wrkexp!:ElementRef;
   showAboutSection:boolean=false;
   showExp:boolean=false;
-
+  myForm!:FormGroup;
+constructor(private router:Router,private http:HttpClient,private fb:FormBuilder){}
+// ngOnInit(){
+//   this.myForm=this.fb.group({
+//     name:[''],
+//     email:['']
+//   })
+// }
   scrollToExp() {
     this.showExp = true; // make it visible first
     setTimeout(() => {
       this.wrkexp.nativeElement.scrollIntoView({ behavior: 'smooth' });
     }, 100); // slight delay so element exists before scroll
   }
+  // cont(){
+  // //  const data=this.myForm.value;
+   
+  //   const url="http://localhost:8080/getData";
+  //   this.http.get<any>(url).subscribe({
+  //     next:(response)=>{
+  //       console.log(response)
+  //     }
+  //   })
+  // }
 }
